@@ -260,7 +260,7 @@ allvolcanoplot <- EnhancedVolcano(res_table.new_tb,
   theme(text=element_text(family="Times New Roman", face="bold", size=12)) 
 allvolcanoplot
 ```
-![image](https://github.com/anubhavchandla/UCLA-AD-vs-NA-RNA-Seq-Analysis/assets/166166948/5e712f8f-a241-4b94-be5c-faeca00764b9)
+![image](https://github.com/anubhavchandla/UCLA-AD-vs-NA-RNA-Seq-Analysis/assets/166166948/ad96bd19-703c-4498-b87f-afc4c00a6714)
 
 
 
