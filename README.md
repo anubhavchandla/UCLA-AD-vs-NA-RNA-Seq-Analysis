@@ -223,7 +223,8 @@ geneheatmap <- pheatmap(norm_OEsig,
                         cluster_cols = T,
                         fontfamily = "serif", angle_col = 0)
 ```
-![image](https://github.com/anubhavchandla/UCLA-AD-vs-NA-RNA-Seq-Analysis/assets/166166948/d7154417-f99c-4112-96ad-aecde5a803ec)
+![image](https://github.com/anubhavchandla/UCLA-AD-vs-NA-RNA-Seq-Analysis/assets/166166948/a0c11a25-5391-4eb8-8e6a-c0b54b1d7cc1)
+
 
 Volcano Plot
 ```
