@@ -127,7 +127,7 @@ pca <- prcomp(t(rld_mat))
 pcaplot <- autoplot(pca, data = meta , colour = "Condition", shape = "Cell.Line", size = 3) + theme(text=element_text(family="Times New Roman", face="bold", size=12))
 pcaplot
 ```
-![image](https://github.com/anubhavchandla/UCLA-AD-vs-NA-RNA-Seq-Analysis/assets/166166948/bd828e59-a83a-42ed-83b9-f120a00976be)
+![image](https://github.com/anubhavchandla/UCLA-AD-vs-NA-RNA-Seq-Analysis/assets/166166948/cbae3170-c408-4445-81be-80b97dd20b24)
 
 Sample Clustering Heatmap
 ```
