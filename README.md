@@ -166,7 +166,7 @@ Sample Comparison Contrasts and MA Plot
 ## Define contrasts, extract results table, and shrink the log2 fold changes
 contrast_adhNa <- c("Condition","NA","AD")
 
-res_tableAdhNA_unshrunken <- results(dds.new, contrast= contrast_adhNa, alpha = 0.05)
+res_tableAdhNA_unshrunken <- results(dds.new, contrast= contrast_adhNa, alpha = 0.01)
 res_table.new <- lfcShrink(dds.new, contrast= contrast_adhNa, res=res_tableAdhNA_unshrunken, type = "ashr")
 
 
@@ -182,8 +182,8 @@ Significant Genes
 summary(res_table.new)
 
 ### Set thresholds
-padj.cutoff <- 0.05
-lfc.cutoff <- 0.5
+padj.cutoff <- 0.01
+lfc.cutoff <- 0.3
 
 ##########Creating Significant Genes Variable
 
@@ -230,7 +230,7 @@ Volcano Plot
 ```
 ## Obtain logical vector where TRUE values denote padj values < 0.05 and fold change > 1.5 in either direction
 res_table.new_tb <- res_table.new_tb %>% 
-  mutate(threshold_OE = padj < 0.05 & abs(log2FoldChange) >= 0.5)
+  mutate(threshold_OE = padj < 0.01 & abs(log2FoldChange) >= 0.3)
 
 ## Create a column to indicate which genes to label
 res_table.new_tb <- res_table.new_tb %>% arrange(padj) %>% mutate(genelabels = "")
@@ -241,8 +241,8 @@ allvolcanoplot <- EnhancedVolcano(res_table.new_tb,
                                   x = 'log2FoldChange',
                                   y = 'pvalue',
                                   xlab = bquote(~Log[2]~ 'fold change'),
-                                  pCutoff = 0.000000001,
-                                  FCcutoff = 0.5,
+                                  pCutoff = 0.01,
+                                  FCcutoff = 0.3,
                                   pointSize = 2.0,
                                   labSize = 4.0,
                                   labCol = 'black',
