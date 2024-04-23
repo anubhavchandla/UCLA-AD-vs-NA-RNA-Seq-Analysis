@@ -173,8 +173,8 @@ res_table.new <- lfcShrink(dds.new, contrast= contrast_adhNa, res=res_tableAdhNA
 plotMA(res_tableAdhNA_unshrunken, ylim=c(-10,10))
 plotMA(res_table.new, ylim=c(-10,10))
 ```
-![image](https://github.com/anubhavchandla/UCLA-AD-vs-NA-RNA-Seq-Analysis/assets/166166948/6c8c1cda-689f-406f-a060-7648e5f57353)
-![image](https://github.com/anubhavchandla/UCLA-AD-vs-NA-RNA-Seq-Analysis/assets/166166948/7a3565e7-0e02-4224-a3f0-c6981f798f0c)
+![image](https://github.com/anubhavchandla/UCLA-AD-vs-NA-RNA-Seq-Analysis/assets/166166948/1a45e243-0245-4938-baa5-0f66a7b569aa)
+![image](https://github.com/anubhavchandla/UCLA-AD-vs-NA-RNA-Seq-Analysis/assets/166166948/0b4b1547-b008-4167-8eed-917877da8084)
 
 Significant Genes
 ```
@@ -196,7 +196,6 @@ sigGenes
 ```
 
 Gene Expression Heat Map
-Gene expression does not cluster by Gene Expression
 ```
 norm_OEsig <- normalized_counts[,c(1,2:19)] %>% 
   dplyr::filter(gene %in% sigGenes$gene) %>% 
@@ -223,7 +222,7 @@ geneheatmap <- pheatmap(norm_OEsig,
                         cluster_cols = T,
                         fontfamily = "serif", angle_col = 0)
 ```
-![image](https://github.com/anubhavchandla/UCLA-AD-vs-NA-RNA-Seq-Analysis/assets/166166948/a0c11a25-5391-4eb8-8e6a-c0b54b1d7cc1)
+![image](https://github.com/anubhavchandla/UCLA-AD-vs-NA-RNA-Seq-Analysis/assets/166166948/652667a5-f67b-4bf8-b5e0-cf67abf626ac)
 
 
 Volcano Plot
@@ -261,7 +260,7 @@ allvolcanoplot <- EnhancedVolcano(res_table.new_tb,
   theme(text=element_text(family="Times New Roman", face="bold", size=12)) 
 allvolcanoplot
 ```
-![image](https://github.com/anubhavchandla/UCLA-AD-vs-NA-RNA-Seq-Analysis/assets/166166948/ad96bd19-703c-4498-b87f-afc4c00a6714)
+![image](https://github.com/anubhavchandla/UCLA-AD-vs-NA-RNA-Seq-Analysis/assets/166166948/63f4093e-0c7c-42f4-9dcf-728ba54916d8)
 
 
 
